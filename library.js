@@ -50,6 +50,8 @@ function createCard(book, parent) {
     console.log(library);
   });
 }
+const openbtn = document.querySelector(".add-button");
+const dialog = document.querySelector(".pop-up");
 
 const book1 = new Book("Book", "A guy", 134, "not read");
 const book2 = new Book("Book2", "Another guy", 1134, "read");
@@ -58,6 +60,10 @@ const book3 = new Book("Book3", "Another guy", 1134, "read");
 library.push(book1);
 library.push(book2);
 library.push(book3);
+
+openbtn.addEventListener("click", function () {
+  dialog.showModal();
+});
 
 const content = document.querySelector(".content");
 library.forEach((element) => {

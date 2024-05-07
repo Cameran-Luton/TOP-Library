@@ -10,3 +10,12 @@
   height: 200px;
   background-color: antiquewhite;
 }
+
+.pop-up {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+}
