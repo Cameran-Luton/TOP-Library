@@ -19,3 +19,27 @@
   width: 50%;
   height: 50%;
 }
+
+dialog::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+.pop-up-header {
+  display: flex;
+  flex-direction: row;
+}
+.pop-up-header p {
+  flex: 1;
+}
+.pop-up-header button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.form {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

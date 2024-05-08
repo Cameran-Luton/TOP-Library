@@ -9,6 +9,22 @@ function Book(title, author, pages, read) {
     return title + " by " + author + ", " + pages + " pages, " + read;
   };
 }
+function addToLibrary() {
+  const booktitle = document.getElementById("title");
+  const bookauthor = document.getElementById("author");
+  const bookpages = document.getElementById("pages");
+  const bookread = document.getElementById("read");
+  console.log(bookread.value);
+  const book = new Book(
+    booktitle.value,
+    bookauthor.value,
+    bookpages.value,
+    bookread.checked ? "read" : "not read"
+  );
+  library.push(book);
+  console.log(library);
+  createCard(library[library.length - 1], content);
+}
 function createCard(book, parent) {
   const card = document.createElement("div");
   const title = document.createElement("h3");
@@ -52,6 +68,7 @@ function createCard(book, parent) {
 }
 const openbtn = document.querySelector(".add-button");
 const dialog = document.querySelector(".pop-up");
+const closebtn = document.querySelector(".close-btn");
 
 const book1 = new Book("Book", "A guy", 134, "not read");
 const book2 = new Book("Book2", "Another guy", 1134, "read");
@@ -63,6 +80,9 @@ library.push(book3);
 
 openbtn.addEventListener("click", function () {
   dialog.showModal();
+});
+closebtn.addEventListener("click", function () {
+  dialog.close();
 });
 
 const content = document.querySelector(".content");
