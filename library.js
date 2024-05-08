@@ -14,16 +14,17 @@ function addToLibrary() {
   const bookauthor = document.getElementById("author");
   const bookpages = document.getElementById("pages");
   const bookread = document.getElementById("read");
-  console.log(bookread.value);
-  const book = new Book(
-    booktitle.value,
-    bookauthor.value,
-    bookpages.value,
-    bookread.checked ? "read" : "not read"
-  );
-  library.push(book);
-  console.log(library);
-  createCard(library[library.length - 1], content);
+  if (booktitle.value != "" && bookauthor.value != "" && bookpages.value >= 1) {
+    const book = new Book(
+      booktitle.value,
+      bookauthor.value,
+      bookpages.value,
+      bookread.checked ? "read" : "not read"
+    );
+    library.push(book);
+    console.log(library);
+    createCard(library[library.length - 1], content);
+  }
 }
 function createCard(book, parent) {
   const card = document.createElement("div");
