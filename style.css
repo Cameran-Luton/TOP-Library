@@ -1,61 +1,85 @@
+/* Styles for the content section */
 .content {
-  margin-top: 20px;
-  width: 80vw;
-  justify-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+    display: grid;
+    margin-top: 20px;
+    width: 80vw;
+    justify-items: center;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-rows: 300px;
 }
+
+/* Styles for the main section */
 .main-section {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
+/* Styles for the header section */
 .header {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* Styles for the card element */
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 10px;
-  width: min(400px, 100%);
-  height: 300px;
-  background-color: gray;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%; /* Modify this line */
+    height: 100%;
+    background-color: #f0f0f0;
 }
 
+/* Styles for the pop-up element */
 .pop-up {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
 }
 
+/* Styles for the backdrop of the dialog element */
 dialog::backdrop {
-  backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
+/* Styles for the header section of the pop-up element */
 .pop-up-header {
-  display: flex;
-  flex-direction: row;
-}
-.pop-up-header p {
-  flex: 1;
-}
-.pop-up-header button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
+/* Styles for the paragraphs inside the pop-up header */
+.pop-up-header p {
+    flex: 1;
+}
+
+/* Styles for the buttons inside the pop-up header */
+.pop-up-header button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+/* Styles for the form element */
 .form {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.add-button {
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    width: 200px;
+    height: 60px;
 }
